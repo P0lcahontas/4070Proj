@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results with Seat Selection</title>
+</head>
+<body>
+    <h1>Search Results: Nairobi → Nakuru</h1>
+
+    <!-- Search Results Section -->
+    <div id="results-container">
+        <div class="result-row">
+            <div class="departure-info">
+                <p><strong>Departure:</strong> 6:45 AM</p>
+                <p><strong>Available Seats:</strong> 11</p>
+            </div>
+            <div class="price-info">
+                <p><strong>Price:</strong> Ksh 1150.00</p>
+            </div>
+            <div class="action-button">
+                <button class="select-seat-button" data-trip-id="1">Select Seat</button>
+            </div>
+        </div>
+
+        <div class="result-row">
+            <div class="departure-info">
+                <p><strong>Departure:</strong> 7:30 AM</p>
+                <p><strong>Available Seats:</strong> 16</p>
+            </div>
+            <div class="price-info">
+                <p><strong>Price:</strong> Ksh 1150.00</p>
+            </div>
+            <div class="action-button">
+                <button class="select-seat-button" data-trip-id="2">Select Seat</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seat Selection Section (hidden by default) -->
+    <div id="seat-selection" style="display: none;">
+        <h2>Select Your Seat</h2>
+        <div id="seat-legend">
+            <span style="background: #ffffff; border: 1px solid black;">Available</span>
+            <span style="background: #d3d3d3;">Occupied</span>
+            <span style="background: #ff0000;">Selected</span>
+        </div>
+        <div id="seat-map">
+            <div class="seat-row">
+                <button class="seat available" data-seat="1A">1A</button>
+                <button class="seat available" data-seat="1B">1B</button>
+                <button class="seat occupied" disabled>1C</button>
+                <button class="seat available" data-seat="1D">1D</button>
+            </div>
+            <div class="seat-row">
+                <button class="seat available" data-seat="2A">2A</button>
+                <button class="seat occupied" disabled>2B</button>
+                <button class="seat available" data-seat="2C">2C</button>
+                <button class="seat available" data-seat="2D">2D</button>
+            </div>
+        </div>
+        <button id="confirm-seat">Confirm Selection</button>
+        <button id="cancel-selection">Cancel</button>
+    </div>
+</body>
+</html>
